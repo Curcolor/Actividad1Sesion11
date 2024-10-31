@@ -21,9 +21,9 @@
       );
 
       if (EsEstudiante === "si") {
-        EsEstudiante = true;
+        EsEstudiante = "Estudiante";
       } else {;
-        EsEstudiante = false;
+        EsEstudiante = "No estudiante";
       }
 
       console.log("El nombre se inicializó con el texto de: " + nombre);
@@ -93,7 +93,7 @@
 
       let mensaje_bienvenida = "";
 
-      if (esMayorDeEdad == true && EsEstudiante.toLowerCase == "estudiante") {
+      if (esMayorDeEdad == true && EsEstudiante == "Estudiante") {
         mensaje_bienvenida = `Binvenido señor@ ${nombre}, por su edad ${edad} y su estado ${EsEstudiante} tiene derecho a un descuento`;
       } else {
         mensaje_bienvenida = `Binvenido señor@ ${nombre}, por su edad ${edad} y su estado ${EsEstudiante} no tiene derecho a un descuento`;
