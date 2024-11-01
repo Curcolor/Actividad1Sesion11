@@ -1,93 +1,50 @@
- /* Actividad 1 parte1: */
- console.log("Parte #1 de la atividad");
+function verificacionCal() {
+  let calif = document.getElementById("calif").value;
 
- let nombre = document.getElementById("NombreInput").value;
- let edad = parseInt(
-   prompt("Introduzca su edad: ")
- );
- let EsEstudiante = prompt(
-   "Introduzca (si ó no) ¿Usted es estuiante?"
- );
+  if (calif >= 90) {
+    document.getElementById("mensaje").innerText = "Aprobado con honores";
+  } else if (calif >= 70) {
+    document.getElementById("mensaje").innerText = "Aprobado";
+  } else {
+    document.getElementById("mensaje").innerText = "Reprobado";
+  }
+}
 
- if (EsEstudiante === "si") {
-   EsEstudiante = "Estudiante";
- } else {;
-   EsEstudiante = "No estudiante";
- }
+function determinacionPar() {
+  let numero = document.getElementById("paroimpar").value;
+  let calc = numero % 2;
 
- console.log("El nombre se inicializó con el texto de: " + nombre);
- console.log("la edad se inicializó con el valor de: " + edad);
- console.log("El etado de estudiante se inicilaizó en " + EsEstudiante);
+  if (calc == 0) {
+    document.getElementById("mensaje2").innerText = `Su número ${numero} es Par`;
+  } else {
+    document.getElementById("mensaje2").innerText = `Su número ${numero} es Impar`;
+  }
+}
 
- nombre = prompt("Introduzca el nombre para cambiar la variable: ");
- edad = parseInt(prompt("Introduzca la edad para cambiar la variable: "));
- EsEstudiante = prompt("Introduzca (si ó no) el estado de estudiante");
+function evalDesc() {
+  let monto = document.getElementById("desc").value;
 
- if (EsEstudiante === "si") {
-   EsEstudiante = "Estudiante";
- } else {
-   EsEstudiante = "No estudiante";
- }
- console.log("\\n El nombre se cambió a: " + nombre);
- console.log("la edad se cambió a: " + edad);
- console.log("El etado se cambió a: " + EsEstudiante);
+  if (monto > 100) {
+    let des = monto*0.10;
+    monto -= des; 
+    document.getElementById("mensaje3").innerText = `Su monto fue aprobado para el descuento de 10% queda total a pagar ${monto}`;
+  } else if (monto <= 100) {
+    document.getElementById("mensaje3").innerText = `Su monto no fue aprobado para descuento queda total a pagar ${monto}`;
+  } 
+}
 
- /* Actividad 1 parte2: */
- console.log("\\nParte #2 de la atividad");
- let a = parseInt(prompt("introduzca un valor númerico para a"));
- let b = parseInt(prompt("introduzca un valor númerico para b"));
 
- let suma, resta, mult, divi;
+function adivinar() {
+  let aleatorio = Math.floor(Math.random() * 10)+1;
+  let numeroUser = document.getElementById("adiv").value;
 
- suma = a + b;
- resta = a - b;
- mult = a * b;
- divi = a / b;
+  if(aleatorio == numeroUser){
 
- console.log("La suma entre a y b es de: " + suma);
- console.log("La resta entre a y b es de: " + resta);
- console.log("La multiplicación entre a y b es de: " + mult);
- console.log("La división entre a y b es de: " + divi);
+    document.getElementById("mensaje4").innerText = "¡Felicidades, adivinaste el número!";
 
- if (a == b) {
-   console.log("\\n a y b tienen MISMO VALOR ==");
- } else {
-   console.log("\\n a y b tienen DIFERENTE VALOR !=");
- }
- if (a < b) {
-   console.log("\\n b es MAYOR QUE a <");
- } else {
-   console.log("\\n a es MAYOR QUE b >");
- }
- if (a <= b) {
-   console.log("\\n b es MAYOR QUE a O SON IGUALES <=");
- }
- if (a >= b) {
-   console.log("\\n a es MAYOR QUE b O SON IGUALES >=");
- }
+  }else{
 
- 
- /* Actividad 1 parte3: */
- console.log("\\n Parte #3 de la atividad");
- let esMayorDeEdad = false;
- if (edad >= 18) {
-   esMayorDeEdad = true;
- }
- let tieneLicencia = prompt("Introduzca (si ó no) ¿Usted tiene licencia?");
- if (tieneLicencia === "si") {
-   tieneLicencia = true;
- }else{
-   tieneLicencia = false;
- }
-
- let mensaje_bienvenida = "";
-
- if (esMayorDeEdad == true && EsEstudiante == "Estudiante") {
-   mensaje_bienvenida = `Binvenido señor@ ${nombre}, por su edad ${edad} y su estado ${EsEstudiante} tiene derecho a un descuento`;
- } else {
-   mensaje_bienvenida = `Binvenido señor@ ${nombre}, por su edad ${edad} y su estado ${EsEstudiante} no tiene derecho a un descuento`;
- }
- console.log("\\n" + mensaje_bienvenida);
- if (esMayorDeEdad == true && tieneLicencia == true) {
-   console.log("Además, tiene licencia por lo tanto puede conducir");
- }
+    document.getElementById("mensaje4").innerText = `Lo siento, el número era ${aleatorio}`;
+  }
+  
+}

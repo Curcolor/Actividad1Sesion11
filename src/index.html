@@ -3,19 +3,66 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/styles/styleIndex.css" />
     <script src="/src/scripts/IndexScript.js"></script>
-    <title>Javascritpt en HTML</title>
+    <title>Actividad 1 Sesión 11</title>
   </head>
+
   <body>
+    <div>
+      <h1>Ejercicio 1</h1>
+      <label for="calif">Verificación de Calificaciones</label>
+      <input
+        type="number"
+        id="calif"
+        name="calif"
+        placeholder="Recuerde.. (Entre 0 y 100)"
+      />
 
-    <input type="number" id="NombreInput" placeholder= "Introduzca su nombre ">
-    <input type="number" id="edadInput" placeholder= "Introduzca su nombre ">
-    <input type="number" id="estudInput" placeholder= "Introduzca su nombre ">
-    <input type="number" id="a" placeholder= "Introduzca su nombre ">
-    <input type="number" id="b" placeholder= "Introduzca su nombre ">
-    <input type="number" id="tieneLic" placeholder= "Introduzca su nombre ">
+      <input type="submit" value="Verificar" onclick="verificacionCal()" />
+      <p id="mensaje"></p>
+    </div>
 
-    <input type="button" value="">
-    
+    <div>
+      <h1>Ejercicio 2</h1>
+      <label for="paroimpar">Determinación de Número Par o Impar</label>
+      <input
+        type="number"
+        id="paroimpar"
+        name="paroimpar"
+        placeholder="Escriba cualquier número.."
+      />
+
+      <input type="submit" value="Determinar" onclick="determinacionPar()" />
+      <p id="mensaje2"></p>
+    </div>
+
+    <div>
+      <h1>Ejercicio 3</h1>
+      <label for="desc">Evaluación de Descuentos</label>
+      <input
+        type="number"
+        id="desc"
+        name="desc"
+        placeholder="Escriba su monto total de su compra.."
+      />
+
+      <input type="submit" value="Evaluar" onclick="evalDesc()" />
+      <p id="mensaje3"></p>
+    </div>
+
+    <div>
+      <h1>Ejercicio 4</h1>
+      <label for="adiv">Adivina el número que estoy pensando</label>
+      <input
+        type="number"
+        id="adiv"
+        name="adiv"
+        placeholder="Escribe el número que usted crea que estoy pensando..."
+      />
+
+      <input type="submit" value="Adivinar" onclick="adivinar()" />
+      <p id="mensaje4"></p>
+    </div>
   </body>
 </html>
