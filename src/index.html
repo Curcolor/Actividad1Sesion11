@@ -3,13 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Actividad 1 Sesión 11</title>
+    <!--RECURSOS QUE USA LA PAGINA (ARCHIVOS EXTERNOS)-->
     <link rel="stylesheet" href="/src/styles/styleIndex.css" />
     <script src="/src/scripts/IndexScript.js"></script>
-    <title>Actividad 1 Sesión 11</title>
   </head>
 
   <body>
     <!--SESION 11 DIVISION POR SECTION-->
+
     <section>
       <h1>ACTIVIDAD 1 SESIÓN 11</h1>
       <div>
@@ -76,11 +78,15 @@
     </section>
 
     <!--SESION 12 DIVISION POR SECTION-->
+
     <section>
       <h1>ACTIVIDAD 1 SESIÓN 12</h1>
       <div>
         <h2>Parte 1</h2>
-        <label for="len">Suma iterada de un array aleatorio (los números serán del 1-10)</label>
+        <label for="len"
+          >Suma iterada de un array aleatorio (los números serán del
+          1-10)</label
+        >
         <input
           type="number"
           id="len"
@@ -88,39 +94,43 @@
           placeholder="Introduzca un tamaño para el array aleatorio.."
         />
 
-        <input type="submit" value="Ver y sumar el vector" onclick="sumaAlea()" />
+        <input
+          type="submit"
+          value="Ver y sumar el vector"
+          onclick="sumaAlea()"
+        />
         <label for="mensaje5">Respuesta</label>
         <p id="mensaje5"></p>
       </div>
 
       <div>
-        <h2>Ejercicio 2</h2>
-        <label for="paroimpar">Determinación de Número Par o Impar</label>
+        <h2>Parte 2</h2>
+        <label for="paroimpar">Detección de número de negativo</label>
         <input
           type="number"
-          id="paroimpar"
-          name="paroimpar"
+          id="nega"
+          name="nega"
           placeholder="Escriba cualquier número.."
         />
 
-        <input type="submit" value="Determinar" onclick="determinacionPar()" />
-        <label for="mensaje2">Respuesta</label>
-        <p id="mensaje2"></p>
+        <input type="submit" value="Detectar" onclick="deteccionneg()" />
+        <label for="mensaje6">Respuesta</label>
+        <p id="mensaje6"></p>
       </div>
 
       <div>
-        <h2>Ejercicio 3</h2>
-        <label for="desc">Evaluación de Descuentos</label>
+        <h2>Parte 3</h2>
+        <label for="desc">Evaluar Contraseña</label>
         <input
-          type="number"
-          id="desc"
-          name="desc"
-          placeholder="Escriba su monto total de su compra.."
+          type="text"
+          id="con"
+          name="con"
+          placeholder="Escriba la contraseña.. (es contraseña..)"
         />
 
-        <input type="submit" value="Evaluar" onclick="evalDesc()" />
-        <label for="mensaje3">Respuesta</label>
-        <p id="mensaje3"></p>
+        <input type="submit" value="Evaluar" onclick="evaluarCon()" />
+        <label for="mensaje7">Respuesta</label>
+        <p id="mensaje7"></p>
       </div>
     </section>
   </body>
