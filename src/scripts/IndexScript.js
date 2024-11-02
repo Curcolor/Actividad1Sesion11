@@ -48,3 +48,16 @@ function adivinar() {
   }
   
 }
+
+function sumaAlea() {
+  let lenUser = parseInt(document.getElementById("len").value);
+  let array = new Array(lenUser);
+  let suma = 0;
+
+  for (let i = 0; i < lenUser; i++) {
+    array[i] = Math.floor(Math.random() * 10) + 1;
+    suma += array[i];
+  }
+
+  document.getElementById("mensaje5").innerHTML = "<strong>Tu Array Aleatorio:</strong><br>"+"["+array.join(", ")+"]"+"<br><strong>Resultado de la suma:</strong> "+suma;
+}

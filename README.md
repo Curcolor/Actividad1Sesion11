@@ -9,7 +9,7 @@ En este repositorio en particular, debido a que hicimos dos sesiones en 1 día, 
 4. Adivinanza de número.
 
 ### Sesión 11 Ejercicios bucles repetitivos
-1. Suma y promedio de elementos en un Array.
-2. Elemento 2
-3. Elemento 3 
+1. Suma los elementos en un Array (for).
+2. Bluce hasta un número negativo (while).
+3. bucle hasta que la contraseña sea correcta (do while).
 
